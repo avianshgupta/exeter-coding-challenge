@@ -23,6 +23,14 @@ def translate():
     Translate all the words in input file which has a translation in the dictionary while 
     preserving the case (upper, lower, capitalize) and write that to output file (t8.shakespeare.translated.txt)
     and write the english word, replaced word and frequency to another csv file (frequency.csv)
+    
+    Words are translated as the following example: 
+    Abuse is translated to Abuser de
+    abuse is translated to abuser de
+    Abuse, is translated to Abuser de,
+    abuse, is translated to abuser de,
+    abused is not translated
+    abuses is not translated as these have different translation in french
     """
     frequency = {}
     output_file = open('t8.shakespeare.translated.txt', 'w')
